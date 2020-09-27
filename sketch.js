@@ -7,6 +7,7 @@ var engine, world;
 var ground;
 var base1, base2;
 var box1;
+var score = 0;
 
 function setup() {
   createCanvas(1200, 400);
@@ -41,7 +42,7 @@ function setup() {
   box14 = new Box(930, 150, 30, 30);
   box15 = new Box(960, 150, 30, 30);
   box16 = new Box(990, 150, 30, 30);
-
+  
   //level3-structure2
   box17 = new Box(840, 120, 30, 30);
   box18 = new Box(870, 120, 30, 30);
@@ -63,8 +64,10 @@ function setup() {
 }
 
 function draw() {
-  background(255); 
+  background(100, 100, 200); 
   Engine.update(engine);
+
+  text("Score: " + score, 750, 40)
 
   box1.display();
   box2.display();
@@ -92,6 +95,32 @@ function draw() {
   box24.display();
   box25.display();
 
+  box1.increment();
+  box2.increment();
+  box3.increment();
+  box4.increment();
+  box5.increment();
+  box6.increment();
+  box7.increment();
+  box8.increment();
+  box9.increment();
+  box10.increment();
+  box11.increment();
+  box12.increment();
+  box13.increment();
+  box14.increment();
+  box15.increment();
+  box16.increment();
+  box17.increment();
+  box18.increment();
+  box19.increment();;
+  box20.increment();
+  box21.increment();
+  box22.increment();
+  box23.increment();
+  box24.increment();
+  box25.increment();
+
   ground.display();
 
   base1.display();  
@@ -117,3 +146,4 @@ function keyPressed() {
     slingShot.attach(polygon.body);
   }
 }
+
